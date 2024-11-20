@@ -1,0 +1,38 @@
+* NGSPICE file created from sky130_ef_ip__template.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_D5KUY4 a_15_n131# a_n175_n243# a_n33_91# a_n73_n131#
+X0 a_15_n131# a_n33_91# a_n73_n131# a_n175_n243# sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+C0 a_15_n131# a_n73_n131# 0.162113f
+C1 a_n33_91# a_15_n131# 0.015495f
+C2 a_n33_91# a_n73_n131# 0.015495f
+C3 a_15_n131# a_n175_n243# 0.13771f
+C4 a_n73_n131# a_n175_n243# 0.13771f
+C5 a_n33_91# a_n175_n243# 0.218066f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_ZUW952 a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
++ VSUBS
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+C0 a_n73_n64# a_n33_n161# 0.014592f
+C1 w_n211_n284# a_15_n64# 0.085834f
+C2 a_15_n64# a_n73_n64# 0.162113f
+C3 a_15_n64# a_n33_n161# 0.014592f
+C4 w_n211_n284# a_n73_n64# 0.085834f
+C5 w_n211_n284# a_n33_n161# 0.143569f
+C6 a_15_n64# VSUBS 0.051727f
+C7 a_n73_n64# VSUBS 0.051727f
+C8 a_n33_n161# VSUBS 0.080264f
+C9 w_n211_n284# VSUBS 1.10443f
+.ends
+
+.subckt sky130_ef_ip__template A Y VPWR VGND
+XXM1 Y VGND A VGND sky130_fd_pr__nfet_01v8_D5KUY4
+XXM2 VPWR A Y VPWR VGND sky130_fd_pr__pfet_01v8_ZUW952
+C0 Y VPWR 0.096732f
+C1 VPWR A 0.088185f
+C2 Y A 0.203911f
+C3 Y VGND 0.384151f
+C4 A VGND 0.417333f
+C5 VPWR VGND 1.278659f
+.ends
+
