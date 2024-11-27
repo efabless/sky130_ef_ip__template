@@ -4,9 +4,10 @@
 
 To create a new repository with this template, click on `Use this template` and set your new repository name.
 
-The repository name should follow the convention:
-
-`<pdk_family>_<handle>_ip__<project>` (Note the double underscore after `ip`.)
+> [!NOTE]  
+> The repository name should follow the convention:
+> 
+> `<pdk_family>_<handle>_ip__<project>` (Note the double underscore after `ip`.)
 
 The handle should be a unique short identifier to prevent conflicts between any IP blocks of the same project name. This could be your initials, for example. Please changes all occurrences of `sky130_ef_ip__template` to your chosen repository/IP name.
 
@@ -60,7 +61,8 @@ The template is set up for the common open source EDA tools for analog design. T
 ```
 
 
-Note: If your project does not use magic layout files, simply delete the `mag/` folder and provide the GDS directly in `gds/`.
+> [!NOTE]  
+> If your project does not use magic layout files, simply delete the `mag/` folder and provide the GDS directly in `gds/`.
 
 ## Dependency Management
 
@@ -84,7 +86,8 @@ The xschemrc of this repository will automatically source the xschemrcs of the d
 
 ---
 
-Please delete everything above and including this text when you create your own IP block using this template, and update the information below.
+> [!IMPORTANT]  
+> Please delete everything above and including this text when you create your own IP block using this template, and update the information below.
 
 # sky130_ef_ip__template ![](../../workflows/cace/badge.svg)
 
