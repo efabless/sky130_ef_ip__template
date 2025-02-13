@@ -24,7 +24,7 @@ if {![info exists PDK]} {
 append XSCHEM_LIBRARY_PATH :[file dirname [info script]]
 
 # Source the dependencies xschemrc files
-foreach rcfile [glob -nocomplain ../ip/*/xschem/xschemrc] {
+foreach rcfile [glob -nocomplain [file dirname [info script]]/../ip/*/xschem/xschemrc] {
   puts "sourcing $rcfile"
   source $rcfile
 }
